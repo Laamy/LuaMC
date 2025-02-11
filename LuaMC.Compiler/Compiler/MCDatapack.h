@@ -54,13 +54,13 @@ private:
 	__forceinline std::string random(std::string prefix) {
 		static const char alphanum[] =
 			"0123456789"
-			"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+			//"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 			"abcdefghijklmnopqrstuvwxyz";
 
 		std::string tmp_s;
 		tmp_s.reserve(5);
 
-		for (int i = 0; i < 5; i++)
+		for (int i = 0; i < 10; i++)
 			tmp_s += alphanum[rand() % (sizeof(alphanum) - 1)];
 
 		return prefix + tmp_s;
@@ -146,7 +146,7 @@ public:
 				if (token.type == TokenType::Identifier && token.value == "cache") {
 					std::string boardName = token.value;
 					DequStringStream builder;
-					builder.set("execute if ");
+					builder.set("execute if score ");
 					// /execute if score $(blank) cache
 
 					token = tokens[i += 1];
@@ -180,8 +180,9 @@ public:
 											// /execute if score test cache >= temp_8D2k3 cache run datapack:internal/if_o2D03
 											// /scoreboard players remove temp_8D2k3 cache
 											std::string hardName = random("internal/if_");
-											builder.front("run " + datapackName + ":" + hardName);
-											builder.front("\nscoreboard players remove " + tempVar + " " + boardName);
+											Log(std::string("Compiling internal-mcfunction ") + hardName);
+											builder.front("run function " + datapackName + ":" + hardName);
+											builder.front("\nscoreboard players reset " + tempVar + " " + boardName);
 											protos.top().AppendLine(builder.str());
 
 											protos.push(MCFunction(hardName));
