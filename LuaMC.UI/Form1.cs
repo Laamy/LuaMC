@@ -79,9 +79,9 @@ end
     private async void buildToolStripMenuItem_Click(object sender, EventArgs e)
     {
         Console.Clear();
-        Console.WriteLine("Build started..");
+        Console.WriteLine("[LuaMC.UI] Build started..");
         _LuaMC.Build(await GetText(), "./Build/");
-        Console.WriteLine("Build completed..");
+        Console.WriteLine("[LuaMC.UI] Build completed..");
     }
 
     private void outputConsoleToolStripMenuItem_Click(object sender, EventArgs e)

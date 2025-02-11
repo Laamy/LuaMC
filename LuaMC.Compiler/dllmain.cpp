@@ -2,13 +2,14 @@
 #include <sstream>
 #include <fstream>
 #include <string>
+#include <filesystem>
 
 typedef void(__stdcall* LogCallback)(const char* msg);
 LogCallback g_LogCallback = nullptr;
 
 void Log(std::string data) {
 	if (g_LogCallback != nullptr)
-		g_LogCallback(("[LuaMC.Compiler]" + data).c_str());
+		g_LogCallback(("[LuaMC.Compiler] " + data).c_str());
 }
 
 #include "Envrionment/Envrionment.h"
@@ -41,15 +42,36 @@ extern "C" __declspec(dllexport) void Build(const char* src, const char* outputD
 	// create datapack project instance using script contents
 	MCDatapack pack = MCDatapack::Create(content);
 
+	std::vector<MCFunction> functions{};
 	try {
 		// attempt to compile datapack
-		auto datapack = pack.Compile();
+		functions = pack.Compile();
 		//for (auto func : datapack) { std::cout << "\nFunc Name: " << func.FuncName << " Content:\n" << func.Content << "\n"; }
 		Log(std::string("Build successfull"));
 	}
 	catch (std::exception ex) {
 		Log(std::string("Error while compiling lua2datapack ") + ex.what());
+		return;
 	}
 
-	Log("TODO: build result at " + std::string(outputDir));
+	//Log("TODO: build result at " + std::string(outputDir));
+#define file std::filesystem
+	file::path outDir(outputDir);
+
+	if (file::exists(outDir))
+		file::remove_all(outDir);
+	file::create_directories(outDir);
+
+	for (const auto& func : functions) {
+		file::path fileLoc = outDir / (func.FuncName + ".mcfunction");
+
+		if (fileLoc.has_parent_path())
+			file::create_directories(fileLoc.parent_path());
+
+		std::ofstream ofs(fileLoc);
+		if (!ofs)
+			return Log((std::string("unable to access ") + fileLoc.string()));
+
+		ofs << func.Content;
+	}
 }
