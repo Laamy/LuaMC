@@ -9,10 +9,10 @@ var LuaHighlightRules = function() {
         "end|function|if|local|then"
     );
 
-    var builtinConstants = ("true|false|Survival|OnTick");
+    var builtinConstants = ("true|false|Survival|Spectator|Creative|Adventure|OnTick");
 
     var functions = (
-        "say", "gamemode"
+        "gamemode|say"
     );
 
     var tags = (

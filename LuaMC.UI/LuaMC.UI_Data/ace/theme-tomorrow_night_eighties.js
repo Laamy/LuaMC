@@ -3,15 +3,15 @@ define("ace/theme/tomorrow_night_eighties",["require","exports","module","ace/li
 exports.isDark = true;
 exports.cssClass = "ace-tomorrow-night-eighties";
 exports.cssText = ".ace-tomorrow-night-eighties .ace_gutter {\
-background: #272727;\
+background: #2E323A;\
 color: #CCC\
 }\
 .ace-tomorrow-night-eighties .ace_print-margin {\
 width: 1px;\
-background: #272727\
+background: #2E323A\
 }\
 .ace-tomorrow-night-eighties {\
-background-color: #2D2D2D;\
+background-color: #282C34;\
 color: #CCCCCC\
 }\
 .ace-tomorrow-night-eighties .ace_constant.ace_other,\
@@ -19,10 +19,10 @@ color: #CCCCCC\
 color: #CCCCCC\
 }\
 .ace-tomorrow-night-eighties .ace_marker-layer .ace_selection {\
-background: #515151\
+background: #404856\
 }\
 .ace-tomorrow-night-eighties.ace_multiselect .ace_selection.ace_start {\
-box-shadow: 0 0 3px 0px #2D2D2D;\
+box-shadow: 0 0 3px 0px #282C34;\
 }\
 .ace-tomorrow-night-eighties .ace_marker-layer .ace_step {\
 background: rgb(102, 82, 0)\
@@ -35,13 +35,13 @@ border: 1px solid #6A6A6A\
 background: rgb(66, 90, 44)\
 }\
 .ace-tomorrow-night-eighties .ace_marker-layer .ace_active-line {\
-background: #393939\
+background: #2C313C\
 }\
 .ace-tomorrow-night-eighties .ace_gutter-active-line {\
-background-color: #393939\
+background-color: #2C313C\
 }\
 .ace-tomorrow-night-eighties .ace_marker-layer .ace_selected-word {\
-border: 1px solid #515151\
+border: 1px solid #282C34\
 }\
 .ace-tomorrow-night-eighties .ace_invisible {\
 color: #6A6A6A\
