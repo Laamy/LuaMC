@@ -12052,14 +12052,14 @@ exports.commands = [{
 }, {
     name: "removeline",
     description: "Remove line",
-    bindKey: bindKey("Ctrl-D", "Command-D"),
+    bindKey: bindKey("Ctrl-X", "Command-X"),
     exec: function(editor) { editor.removeLines(); },
     scrollIntoView: "cursor",
     multiSelectAction: "forEachLine"
 }, {
     name: "duplicateSelection",
     description: "Duplicate selection",
-    bindKey: bindKey("Ctrl-Shift-D", "Command-Shift-D"),
+    bindKey: bindKey("Ctrl-D", "Command-D"),
     exec: function(editor) { editor.duplicateSelection(); },
     scrollIntoView: "cursor",
     multiSelectAction: "forEach"
