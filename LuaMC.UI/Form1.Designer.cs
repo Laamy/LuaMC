@@ -1,4 +1,6 @@
-﻿namespace LuaMC.UI
+﻿using LuaMC.UI.SDK;
+
+namespace LuaMC.UI
 {
     partial class Form1
     {
@@ -31,7 +33,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.OutputConsole = new System.Windows.Forms.Panel();
-            this.output = new System.Windows.Forms.TextBox();
+            this.output = new LuaMC.UI.SDK.ControlTextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -68,7 +70,7 @@
             this.webView21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webView21.Location = new System.Drawing.Point(0, 27);
             this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(830, 806);
+            this.webView21.Size = new System.Drawing.Size(890, 941);
             this.webView21.TabIndex = 2;
             this.webView21.ZoomFactor = 1D;
             // 
@@ -78,9 +80,9 @@
             this.OutputConsole.Controls.Add(this.output);
             this.OutputConsole.Controls.Add(this.panel4);
             this.OutputConsole.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.OutputConsole.Location = new System.Drawing.Point(0, 833);
+            this.OutputConsole.Location = new System.Drawing.Point(0, 968);
             this.OutputConsole.Name = "OutputConsole";
-            this.OutputConsole.Size = new System.Drawing.Size(830, 108);
+            this.OutputConsole.Size = new System.Drawing.Size(890, 108);
             this.OutputConsole.TabIndex = 3;
             // 
             // output
@@ -95,8 +97,7 @@
             this.output.Multiline = true;
             this.output.Name = "output";
             this.output.ReadOnly = true;
-            this.output.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.output.Size = new System.Drawing.Size(830, 90);
+            this.output.Size = new System.Drawing.Size(890, 90);
             this.output.TabIndex = 6;
             // 
             // panel4
@@ -106,7 +107,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(830, 18);
+            this.panel4.Size = new System.Drawing.Size(890, 18);
             this.panel4.TabIndex = 5;
             // 
             // label1
@@ -124,9 +125,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 941);
+            this.panel1.Location = new System.Drawing.Point(0, 1076);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(830, 18);
+            this.panel1.Size = new System.Drawing.Size(890, 18);
             this.panel1.TabIndex = 6;
             // 
             // label2
@@ -150,7 +151,7 @@
             this.titlebarPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.titlebarPanel.Location = new System.Drawing.Point(0, 0);
             this.titlebarPanel.Name = "titlebarPanel";
-            this.titlebarPanel.Size = new System.Drawing.Size(830, 27);
+            this.titlebarPanel.Size = new System.Drawing.Size(890, 27);
             this.titlebarPanel.TabIndex = 7;
             // 
             // menuStrip1
@@ -161,7 +162,7 @@
             this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(32, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(708, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(768, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -195,7 +196,7 @@
             // 
             this.buildToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.buildToolStripMenuItem.Name = "buildToolStripMenuItem";
-            this.buildToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buildToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.buildToolStripMenuItem.Text = "Build";
             this.buildToolStripMenuItem.Click += new System.EventHandler(this.buildToolStripMenuItem_Click_1);
             // 
@@ -214,14 +215,14 @@
             this.outputConsoleToolStripMenuItem});
             this.viewGraphToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.viewGraphToolStripMenuItem.Name = "viewGraphToolStripMenuItem";
-            this.viewGraphToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewGraphToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.viewGraphToolStripMenuItem.Text = "View Graph..";
             // 
             // outputConsoleToolStripMenuItem
             // 
             this.outputConsoleToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.outputConsoleToolStripMenuItem.Name = "outputConsoleToolStripMenuItem";
-            this.outputConsoleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.outputConsoleToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.outputConsoleToolStripMenuItem.Text = "Output Console";
             this.outputConsoleToolStripMenuItem.Click += new System.EventHandler(this.outputConsoleToolStripMenuItem_Click);
             // 
@@ -247,9 +248,9 @@
             // Titlebar_MinBtn
             // 
             this.Titlebar_MinBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Titlebar_MinBtn.Font = new System.Drawing.Font("Segoe Fluent Icons", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titlebar_MinBtn.Font = new System.Drawing.Font("Segoe Fluent Icons", 8F);
             this.Titlebar_MinBtn.ForeColor = System.Drawing.Color.Gray;
-            this.Titlebar_MinBtn.Location = new System.Drawing.Point(740, 0);
+            this.Titlebar_MinBtn.Location = new System.Drawing.Point(800, 0);
             this.Titlebar_MinBtn.Name = "Titlebar_MinBtn";
             this.Titlebar_MinBtn.Size = new System.Drawing.Size(30, 27);
             this.Titlebar_MinBtn.TabIndex = 3;
@@ -259,9 +260,9 @@
             // Titlebar_MinMaxBtn
             // 
             this.Titlebar_MinMaxBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Titlebar_MinMaxBtn.Font = new System.Drawing.Font("Segoe Fluent Icons", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titlebar_MinMaxBtn.Font = new System.Drawing.Font("Segoe Fluent Icons", 8F);
             this.Titlebar_MinMaxBtn.ForeColor = System.Drawing.Color.Gray;
-            this.Titlebar_MinMaxBtn.Location = new System.Drawing.Point(770, 0);
+            this.Titlebar_MinMaxBtn.Location = new System.Drawing.Point(830, 0);
             this.Titlebar_MinMaxBtn.Name = "Titlebar_MinMaxBtn";
             this.Titlebar_MinMaxBtn.Size = new System.Drawing.Size(30, 27);
             this.Titlebar_MinMaxBtn.TabIndex = 2;
@@ -271,9 +272,9 @@
             // Titlebar_XBtn
             // 
             this.Titlebar_XBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Titlebar_XBtn.Font = new System.Drawing.Font("Segoe Fluent Icons", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titlebar_XBtn.Font = new System.Drawing.Font("Segoe Fluent Icons", 8F);
             this.Titlebar_XBtn.ForeColor = System.Drawing.Color.Gray;
-            this.Titlebar_XBtn.Location = new System.Drawing.Point(800, 0);
+            this.Titlebar_XBtn.Location = new System.Drawing.Point(860, 0);
             this.Titlebar_XBtn.Name = "Titlebar_XBtn";
             this.Titlebar_XBtn.Size = new System.Drawing.Size(30, 27);
             this.Titlebar_XBtn.TabIndex = 1;
@@ -285,7 +286,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(830, 959);
+            this.ClientSize = new System.Drawing.Size(890, 1094);
             this.Controls.Add(this.webView21);
             this.Controls.Add(this.OutputConsole);
             this.Controls.Add(this.panel1);
@@ -319,7 +320,7 @@
         private System.Windows.Forms.Panel OutputConsole;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox output;
+        private ControlTextBox output;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel titlebarPanel;
