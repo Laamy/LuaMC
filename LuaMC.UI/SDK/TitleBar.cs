@@ -19,6 +19,7 @@ public class TitleBar
         {
             dragging = true;
             offset = e.Location;
+            control.Capture = true;
         };
 
         control.MouseMove += (sender, e) =>
@@ -33,6 +34,7 @@ public class TitleBar
         control.MouseUp += (sender, e) =>
         {
             dragging = false;
+            control.Capture = false;
         };
     }
 }
