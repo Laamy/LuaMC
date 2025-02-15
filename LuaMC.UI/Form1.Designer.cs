@@ -70,7 +70,7 @@ namespace LuaMC.UI
             this.webView21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webView21.Location = new System.Drawing.Point(0, 27);
             this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(890, 941);
+            this.webView21.Size = new System.Drawing.Size(902, 941);
             this.webView21.TabIndex = 2;
             this.webView21.ZoomFactor = 1D;
             // 
@@ -82,7 +82,7 @@ namespace LuaMC.UI
             this.OutputConsole.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.OutputConsole.Location = new System.Drawing.Point(0, 968);
             this.OutputConsole.Name = "OutputConsole";
-            this.OutputConsole.Size = new System.Drawing.Size(890, 108);
+            this.OutputConsole.Size = new System.Drawing.Size(902, 108);
             this.OutputConsole.TabIndex = 3;
             // 
             // output
@@ -97,7 +97,7 @@ namespace LuaMC.UI
             this.output.Multiline = true;
             this.output.Name = "output";
             this.output.ReadOnly = true;
-            this.output.Size = new System.Drawing.Size(890, 90);
+            this.output.Size = new System.Drawing.Size(902, 90);
             this.output.TabIndex = 6;
             // 
             // panel4
@@ -107,7 +107,7 @@ namespace LuaMC.UI
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(890, 18);
+            this.panel4.Size = new System.Drawing.Size(902, 18);
             this.panel4.TabIndex = 5;
             // 
             // label1
@@ -127,7 +127,7 @@ namespace LuaMC.UI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 1076);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(890, 18);
+            this.panel1.Size = new System.Drawing.Size(902, 18);
             this.panel1.TabIndex = 6;
             // 
             // label2
@@ -151,7 +151,7 @@ namespace LuaMC.UI
             this.titlebarPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.titlebarPanel.Location = new System.Drawing.Point(0, 0);
             this.titlebarPanel.Name = "titlebarPanel";
-            this.titlebarPanel.Size = new System.Drawing.Size(890, 27);
+            this.titlebarPanel.Size = new System.Drawing.Size(902, 27);
             this.titlebarPanel.TabIndex = 7;
             // 
             // menuStrip1
@@ -162,7 +162,7 @@ namespace LuaMC.UI
             this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(32, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(768, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(780, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -250,7 +250,7 @@ namespace LuaMC.UI
             this.Titlebar_MinBtn.Dock = System.Windows.Forms.DockStyle.Right;
             this.Titlebar_MinBtn.Font = new System.Drawing.Font("Segoe Fluent Icons", 8F);
             this.Titlebar_MinBtn.ForeColor = System.Drawing.Color.Gray;
-            this.Titlebar_MinBtn.Location = new System.Drawing.Point(800, 0);
+            this.Titlebar_MinBtn.Location = new System.Drawing.Point(812, 0);
             this.Titlebar_MinBtn.Name = "Titlebar_MinBtn";
             this.Titlebar_MinBtn.Size = new System.Drawing.Size(30, 27);
             this.Titlebar_MinBtn.TabIndex = 3;
@@ -262,7 +262,7 @@ namespace LuaMC.UI
             this.Titlebar_MinMaxBtn.Dock = System.Windows.Forms.DockStyle.Right;
             this.Titlebar_MinMaxBtn.Font = new System.Drawing.Font("Segoe Fluent Icons", 8F);
             this.Titlebar_MinMaxBtn.ForeColor = System.Drawing.Color.Gray;
-            this.Titlebar_MinMaxBtn.Location = new System.Drawing.Point(830, 0);
+            this.Titlebar_MinMaxBtn.Location = new System.Drawing.Point(842, 0);
             this.Titlebar_MinMaxBtn.Name = "Titlebar_MinMaxBtn";
             this.Titlebar_MinMaxBtn.Size = new System.Drawing.Size(30, 27);
             this.Titlebar_MinMaxBtn.TabIndex = 2;
@@ -274,7 +274,7 @@ namespace LuaMC.UI
             this.Titlebar_XBtn.Dock = System.Windows.Forms.DockStyle.Right;
             this.Titlebar_XBtn.Font = new System.Drawing.Font("Segoe Fluent Icons", 8F);
             this.Titlebar_XBtn.ForeColor = System.Drawing.Color.Gray;
-            this.Titlebar_XBtn.Location = new System.Drawing.Point(860, 0);
+            this.Titlebar_XBtn.Location = new System.Drawing.Point(872, 0);
             this.Titlebar_XBtn.Name = "Titlebar_XBtn";
             this.Titlebar_XBtn.Size = new System.Drawing.Size(30, 27);
             this.Titlebar_XBtn.TabIndex = 1;
@@ -286,7 +286,7 @@ namespace LuaMC.UI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(890, 1094);
+            this.ClientSize = new System.Drawing.Size(902, 1094);
             this.Controls.Add(this.webView21);
             this.Controls.Add(this.OutputConsole);
             this.Controls.Add(this.panel1);

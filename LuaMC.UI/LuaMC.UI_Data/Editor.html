@@ -17,6 +17,22 @@
         left: 0;
         right: 0;
     }
+
+    .ace_editor {
+        scrollbar-color: #2f333d #282c34;
+    }
+
+    body .ace_scrollbar {
+        -webkit-transition: opacity .3s ease-in-out;
+        -moz-transition: opacity .3s ease-in-out;
+        -o-transition: opacity .3s ease-in-out;
+        transition: opacity .3s ease-in-out;
+        opacity: 0;
+    }
+
+    body .ace_editor:hover .ace_scrollbar {
+        opacity: 1;
+    }
   </style>
   <script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
   <script src="ace/ext-language_tools.js"></script>
