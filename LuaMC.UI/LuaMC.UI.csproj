@@ -133,6 +133,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="assets\build.png" />
+    <None Include="assets\saveas.png" />
+    <None Include="assets\close.png" />
+    <None Include="assets\save.png" />
     <Content Include="LuaMC.UI_Data\ace\ace.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -86,6 +86,7 @@ public partial class Form1 : ControlForm
         webView21.NavigationCompleted += OnIDE_Load;
         webView21.CoreWebView2.ContextMenuRequested += (s, e) => e.Handled = true;
         webView21.CoreWebView2.Settings.AreDevToolsEnabled = false;
+        webView21.CoreWebView2.Settings.AreBrowserAcceleratorKeysEnabled = false;//dfggfhd
     }
 
     private void OnIDE_Load(object sender, CoreWebView2NavigationCompletedEventArgs e)
